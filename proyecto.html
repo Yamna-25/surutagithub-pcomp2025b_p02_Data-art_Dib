@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <!--Google Fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Jost:wght@500&family=Righteous&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+      <link href="style.css" rel="stylesheet">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Aaron Koblin Data</title>
+   <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<header class="site-header">
+   <div class="contenedor">
+      <a href="#" class="logo">DATA AARON KOBLIN</a>
+         <nav class="nav" aria-label="Menu principal">
+            <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+               <ul class="nav-list">
+                  <h2 class="seccion"><a href="index.html">Inicio</a></h2>
+                  <h2 class="seccion"><a href="colaboración.html">Colaboración</a></li>
+                  <h2 class="seccion"><a href="proyecto.html">Proyecto</a></h2>
+                  <h2 class="seccion"><a href="principios.html">Principios</a></h2>
+                  <h2 class="seccion"><a href="reflexion.html">Reflexión</a></h2>
+               </ul>
+         </nav>
+   </div>
+</header>
+
+<main>
+<section class="hero">
+      <div class="contenedor">
+         <img src="img/paraarribacompleta.png" style = "border-radius: 20px;">
+      <h1>Johnny Cash Proyect</h1>
+      <p>Un homenaje colaborativo a Johnny Cash y su legado, basado en la canción “Ain’t No Grave”.</p>
+   </div>
+</section>
+
+
+   <section class="contenedor 3">
+      <article>
+         <h2 id="proyecto">¿Qué es?</h2>
+            <p>
+               Es un video musical animado, donde cada frame está hecho a mano por una persona distinta, siendo asi que cada contribución se unía automáticamente para formar un video musical en evolución constante. Cada reproducción ofrecía una versión distinta, representando la “vida continua” del artista a través del trabajo colectivo de los participantes.
+            </p>
+      </article>
+
+ <section class="contenedor 3">
+  <article class="diagrama">
+    <h2>Diagrama del proceso creativo y productivo del Proyecto</h2>
+    <img src="img/diagra.jpg" alt="Diagrama del proceso">
+  </article>
+</section>
+
+
+      <section class="contenedor texto-proyecto">
+  <h2>¿Qué es lo interesante de este proyecto?</h2>
+
+  <div class="bloque">
+    <p>
+      Al ser un <span class="resaltado">proyecto colaborativo</span> y brindar una libertad creativa ilimitada 
+      a las personas que participan de él, cada frame está personalizado e 
+      íntegramente relacionado con los otros que se presencian.  
+      Cada uno está cargado de diferentes <span class="palabra">personalidades</span>, 
+      <span class="palabra">contextos</span> y <span class="palabra">caracteres</span>, 
+      siendo tratados como obras referenciales al video musical.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <p>
+      No obstante, en conjunto se complementan formando una sola obra de 
+      <span class="resaltado">autoría colectiva</span> que reúne personas de diferentes ámbitos.  
+      Este proyecto invita a la <span class="palabra">convivencia social</span> para alcanzar un objetivo común:
+      <em>mantener viva la esencia de Johnny Cash y su legado</em> a través de la visualidad única de cada participante.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <p>
+      A partir de su difusión se logró un resultado que impulsa a pensar nuevas formas de usar
+      <span class="resaltado">internet</span> y la <span class="resaltado">web</span> como medios de conexión, 
+      reflejando el deseo colectivo por participar en proyectos artísticos digitales.
+    </p>
+  </div>
+
+  <h2>Tecnología utilizada</h2>
+
+  <ul class="tecnologia">
+    <li><span>1</span> Plataforma web interactiva</li>
+    <li><span>2</span> Base de datos y sistema cliente-servidor</li>
+    <li><span>3</span> Herramienta de dibujo digital personalizada</li>
+    <li><span>4</span> Sistema automatizado de integración y visualización de aportes</li>
+  </ul>
+</section>
+
+
+<footer class="site-footer">
+   <div class="contenedor">
+      <p>&copy; 2025 Aaron Koblin Data-Grupo 9. Todos los derechos reservados.</p>
+   </div>
+</footer>
+
+<script>
+    // Menú responsive opcional
+   const toggle = document.querySelector('.nav-toggle');
+   const list = document.querySelector('.nav-list');
+   toggle?.addEventListener('click', () => {
+      list.classList.toggle('open');
+   });
+</script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+
+/* SECCIÓN DE PESTAÑA INICIO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*letra de cada texto */
+
+body {
+  font-family: "Jost", "Gabarito", sans-serif;
+  color: #222;
+  background: linear-gradient(180deg, #fffdf5 0%, #f5f7fa 100%);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+/*cuadros de contenedor */
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/*interfaz de arriba */
+.site-header {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.site-header.scrolled {
+  background: rgba(10, 10, 10, 0.9);
+}
+
+.site-header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Righteous", cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffb300;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/*letra interfaz arriba*/
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.95);
+    top: 65px;
+    right: 10px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 1rem;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+.hero h1 {
+  font-family: "Righteous", cursive;
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 2px 2px 0 #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+section {
+  padding: 3.5rem 1rem;
+  position: relative;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.cards, .cartas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card, .carta {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.card:hover, .carta:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.site-footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: left;
+  padding: 1.8rem 0;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,195,0,0.15), transparent 70%);
+  animation: footerGlow 8s infinite alternate;
+}
+
+@keyframes footerGlow {
+  from { transform: rotate(0deg); opacity: 0.5; }
+  to { transform: rotate(360deg); opacity: 1; }
+}
+
+/* Proyectos Destacados lado a lado  con sus nombres y descripciones*/
+.proyecto {
+  display: flex;  /* imagen + texto se acomoden en fila en lugar de columna*/
+  align-items: flex-start;
+  gap: 2rem;   /* espacio entre la imagen y el texto*/
+  margin-bottom: 3rem;
+}
+
+.proyecto img { /* estilo img de proyecto*/
+  max-width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto img:hover { /* al pasar el mouse se hace mas grande*/
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+.texto-proyecto {
+  flex: 1;
+  font-family: 'Gabarito', sans-serif;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Hero unificado para todas las páginas con movimiento de fondo --- */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  overflow: hidden;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  color: #fff;
+  background: transparent; /* fondo original transparente */
+}
+
+/* Imagen de fondo animada */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/paraarribacompleta.png');
+  background-size: cover;
+  background-position: center top; /* inicia arriba */
+  filter: brightness(0.6); /* oscurece para resaltar texto */
+  z-index: 0;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  animation: moverFondo 20s linear infinite alternate; /* animación de movimiento */
+}
+
+/* Animación de desplazamiento suave */
+@keyframes moverFondo {
+  0% { background-position: center top; }
+  50% { background-position: center center; }
+  100% { background-position: center bottom; }
+}
+
+/* Contenido encima del hero */
+.hero .contenedor {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-family: "Righteous", cursive; 
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Oculta la imagen <img> dentro del contenedor */
+.hero img {
+  display: none;
+}
+
+
+/*HASTA AQUI ACABA INICIO */
+
+
+
+
+
+
+/* Sección de PESTAÑA DE  PROYECTO */
+/*  DIAGRAMA CENTRADO */
+section.contenedor.3 {
+  width: 110%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+  background-color: #faf9f6; /* fondo suave */
+  padding: 1rem 0;
+  position: relative;
+}
+
+.diagrama {
+  text-align: center;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.diagrama h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.diagrama img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.diagrama img:hover {
+  transform: scale(1.02);
+}
+
+/* opcional: halo dorado sutil detrás */
+.diagrama::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* texto de proyecto */
+
+.texto-proyecto {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 3rem;
+  background: #fffdf9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  line-height: 1.8;
+  font-family: 'Gabarito', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.texto-proyecto h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  color: #111;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.texto-proyecto h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffcc33;
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+.texto-proyecto .bloque {
+  background: #fff8e7;
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-left: 5px solid #ffcc33;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.texto-proyecto .bloque:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.texto-proyecto p {
+  font-size: 1.05rem;
+  color: #333;
+  text-align: justify;
+}
+
+.resaltado {
+  color: #e08e00;
+  font-weight: bold;
+}
+
+.palabra {
+  background: #ffedb0;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.palabra:hover {
+  background: #ffe15b;
+}
+
+/* --- LISTA DE TECNOLOGÍA --- */
+.tecnologia {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.tecnologia li {
+  background: #fff3d6;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tecnologia li:hover {
+  background: #ffea9b;
+  transform: scale(1.03);
+}
+/* HASTA AQUÍ ACABA PESTAÑA DE PROYECTO */
+
+/* AQUÍ INICIA PESTAÑA DE REFLEXIÓN  */
+
+section.reflexion {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* títulos */
+section.reflexion h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+
+/* tarjetas flotantes para párrafos */
+section.reflexion p {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.8;
+  text-align: justify;
+  background: #fff8e7;
+  padding: 5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  overflow-wrap: break-word;
+}
+
+/* efecto hover flotante */
+section.reflexion p:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+  background: #fffbe0;
+}
+
+/* animación de entrada suave al cargar la página */
+section.reflexion p {
+  animation: floatUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* HASTA AQUI ACABA REFLEXIÓN */
+
+/* AQUI INICIA COLABORACIÓN*/
+section.contenedor.colaboracion {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section.contenedor.colaboracion h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section.contenedor.colaboracion h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffb300, #ffca28);
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+section.contenedor.colaboracion p {
+  font-family: 'Gabarito', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  background: #fff8e7;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+section.contenedor.colaboracion p:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+  background: #fffbe0;
+}
+
+/* AQUI ACABA COLABORACIÓN*/
+
